@@ -1,0 +1,508 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3、vue实现的原理 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="unix.html" />
+    
+    
+    <link rel="prev" href="set.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    一、首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    三、前端知识点
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="information.html">
+            
+                <a href="information.html">
+            
+                    
+                    1、依赖介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="set.html">
+            
+                <a href="set.html">
+            
+                    
+                    2、set提高代码性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="vue.html">
+            
+                <a href="vue.html">
+            
+                    
+                    3、vue实现的原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="unix.html">
+            
+                <a href="unix.html">
+            
+                    
+                    4、mac新建Unix文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="render.html">
+            
+                <a href="render.html">
+            
+                    
+                    5、vue的render渲染函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="vuepress.html">
+            
+                <a href="vuepress.html">
+            
+                    
+                    6、vuepress的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="webpack.html">
+            
+                <a href="webpack.html">
+            
+                    
+                    7、webpack配置及用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="slot.html">
+            
+                <a href="slot.html">
+            
+                    
+                    8、vue的插槽
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="provide-inject.html">
+            
+                <a href="provide-inject.html">
+            
+                    
+                    9、vue中的依赖注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="weixin.html">
+            
+                <a href="weixin.html">
+            
+                    
+                    10、微信公众号+egg+sunny配置后端接口开发流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Markdown/readme.html">
+            
+                <a href="../Markdown/readme.html">
+            
+                    
+                    四、Markdown基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Node/readme.html">
+            
+                <a href="../Node/readme.html">
+            
+                    
+                    五、node
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Security/xss.html">
+            
+                <a href="../Security/xss.html">
+            
+                    
+                    六、前端安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    六、python爬虫
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../python/01.html">
+            
+                <a href="../python/01.html">
+            
+                    
+                    1、爬去妹子网全站图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    七、文学文章
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../literature/xss.html">
+            
+                <a href="../literature/xss.html">
+            
+                    
+                    1、test
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >3、vue实现的原理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="3&#x3001;vue&#x5B9E;&#x73B0;&#x7684;&#x539F;&#x7406;">3&#x3001;vue&#x5B9E;&#x73B0;&#x7684;&#x539F;&#x7406;</h1>
+<p>&#x6574;&#x7406;&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x8981;&#x5B9E;&#x73B0;mvvm&#x7684;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#xFF0C;&#x5C31;&#x5FC5;&#x987B;&#x8981;&#x5B9E;&#x73B0;&#x4EE5;&#x4E0B;&#x51E0;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x76D1;&#x542C;&#x5668;Observer&#xFF0C;&#x80FD;&#x591F;&#x5BF9;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x76D1;&#x542C;&#xFF0C;&#x5982;&#x6709;&#x53D8;&#x52A8;&#x53EF;&#x62FF;&#x5230;&#x6700;&#x65B0;&#x503C;&#x5E76;&#x901A;&#x77E5;&#x8BA2;&#x9605;&#x8005;</li>
+<li>&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x6307;&#x4EE4;&#x89E3;&#x6790;&#x5668;Compile&#xFF0C;&#x5BF9;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8282;&#x70B9;&#x7684;&#x6307;&#x4EE4;&#x8FDB;&#x884C;&#x626B;&#x63CF;&#x548C;&#x89E3;&#x6790;&#xFF0C;&#x6839;&#x636E;&#x6307;&#x4EE4;&#x6A21;&#x677F;&#x66FF;&#x6362;&#x6570;&#x636E;&#xFF0C;&#x4EE5;&#x53CA;&#x7ED1;&#x5B9A;&#x76F8;&#x5E94;&#x7684;&#x66F4;&#x65B0;&#x51FD;&#x6570;</li>
+<li>&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;Watcher&#xFF0C;&#x4F5C;&#x4E3A;&#x8FDE;&#x63A5;Observer&#x548C;Compile&#x7684;&#x6865;&#x6881;&#xFF0C;&#x80FD;&#x591F;&#x8BA2;&#x9605;&#x5E76;&#x6536;&#x5230;&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;&#x53D8;&#x52A8;&#x7684;&#x901A;&#x77E5;&#xFF0C;&#x6267;&#x884C;&#x6307;&#x4EE4;&#x7ED1;&#x5B9A;&#x7684;&#x76F8;&#x5E94;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x4ECE;&#x800C;&#x66F4;&#x65B0;&#x89C6;&#x56FE;</li>
+<li>mvvm&#x5165;&#x53E3;&#x51FD;&#x6570;&#xFF0C;&#x6574;&#x5408;&#x4EE5;&#x4E0A;&#x4E09;&#x8005;<pre><code class="lang-angular2">var obj = {};
+Object.defineProperty(obj,&quot;name&quot;,{
+ get() {
+     return document.querySelector(&quot;#name&quot;).innerHTML;
+ },
+ set(val) {
+     document.querySelector(&quot;#name&quot;).innerHTML = val;
+ }
+})
+obj.name = &quot;Aaron&quot;;
+</code></pre>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="set.html" class="navigation navigation-prev " aria-label="Previous page: 2、set提高代码性能">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="unix.html" class="navigation navigation-next " aria-label="Next page: 4、mac新建Unix文件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3、vue实现的原理","level":"1.2.3","depth":2,"next":{"title":"4、mac新建Unix文件","level":"1.2.4","depth":2,"path":"doc/web/unix.md","ref":"doc/web/unix.md","articles":[]},"previous":{"title":"2、set提高代码性能","level":"1.2.2","depth":2,"path":"doc/web/set.md","ref":"doc/web/set.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/web/vue.md","mtime":"2019-07-17T00:25:48.535Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-31T09:59:50.938Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

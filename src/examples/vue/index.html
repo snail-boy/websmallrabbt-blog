@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <input type="text" id="input-msg">
+    <p id="output-msg"></p>
+</div>
+<script>
+    var inputMsg = document.getElementById('input-msg'),
+        outputMsg = document.getElementById('output-msg');
+
+    var obj = {
+        msg: 'hello'
+    }
+    var key = 'msg';
+    var val = obj[key]
+    Object.defineProperty(obj, key, {
+        enumerable: true,
+        configurable: true,
+        set(v) {
+           console.log('setter')
+            val = v
+            outputMsg.innerText = obj[key]
+        },
+        get() {
+            console.log('getter')
+            return val
+        }
+    })
+    inputMsg.addEventListener('input', function (event) {
+        var newVal = event.target.value;
+
+         = newVal
+    })
+</script>
+</body>
+</html>
